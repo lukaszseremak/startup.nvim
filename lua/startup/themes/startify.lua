@@ -15,12 +15,13 @@ end
 for key, file in pairs(user_bookmarks) do
     user_bookmark_mappings[key] = "<cmd>e " .. file .. "<CR>"
 end
-local cow = {
-    "        \\   ^__^",
-    "         \\  (oo)\\_______",
-    "            (__)\\       )\\/\\",
-    "                ||----w |",
-    "                ||     ||",
+local vader = {
+    "        \\    ,-^-.",
+    "         \\   !oYo!",
+    "          \\ /./=\\.\\______",
+    "               ##        )\\/\\",
+    "                ||-----w||",
+    "                ||      ||",
 }
 
 local quote = require("startup.functions").quote()
@@ -49,7 +50,7 @@ for _, line in ipairs(quote) do
 end
 table.insert(complete, "▙" .. string.rep("▄", length - 2) .. "▟")
 
-for _, line in ipairs(cow) do
+for _, line in ipairs(vader) do
     complete[#complete + 1] = line
 end
 
