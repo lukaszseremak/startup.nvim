@@ -71,18 +71,6 @@ local settings = {
     },
     body = {
         type = "oldfiles",
-        oldfiles_directory = false,
-        align = "left",
-        fold_section = false,
-        title = "Oldfiles",
-        margin = 5,
-        content = "",
-        highlight = "String",
-        default_color = "",
-        oldfiles_amount = 5,
-    },
-    body_2 = {
-        type = "oldfiles",
         oldfiles_directory = true,
         align = "left",
         fold_section = false,
@@ -91,13 +79,6 @@ local settings = {
         content = "",
         highlight = "String",
         oldfiles_amount = 5,
-    },
-    bookmarks = {
-        type = "text",
-        align = "left",
-        margin = 5,
-        content = bookmark_texts,
-        highlight = "String",
     },
     options = {
         after = function()
@@ -121,7 +102,7 @@ local settings = {
         background = "#1f2227",
         folded_section = "#56b6c2",
     },
-    parts = { "header", "body", "body_2", "bookmarks" },
+    parts = { "header", "body" },
 }
 
 return settings
